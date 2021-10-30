@@ -2,7 +2,7 @@
 <h1> The current time is: <span id="time"></span> </h1>
 <p id="time"></p>
 <script type = "text/javascript">
-  setInterval(currenttime, 500);
+  setInterval(currenttime(), 500);
     function currenttime(){
       var time = new Date();
       var hours = time.getHours();
