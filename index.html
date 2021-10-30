@@ -1,27 +1,29 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-      <h1> My name is Jiao Jiao Ding and my favorite hobby is reading.</h1>
-      <h1> The current time is: <span id="time"></span> </h1>
+    <h1> My name is Jiao Jiao Ding and my favorite hobby is reading.</h1>
+    <h1> The current time is: <span id="clock"></span></h1>
   </head>
   <body>
-      <p id="time">1</p>
-      <script type = "text/javascript">
-        setInterval("currenttime()", 1);
-          function currenttime(){
-            var time = new Date();
-            var hours = time.getHours();
-            var minutes = time.getMinutes();
-            var seconds = time.getSeconds();
+    <div id = "clock"></div>
+    <script type = "text/javascript">
+      setInterval(displayclock, 1);
+        function displayclock(){
+          var time = new Date(); 
+          var hrs = time.getHours();
+          var min = time.getMinutes();
+          var sec = time.getSeconds();
 
-            if(hours > 12){
-              hours = hours -12;
-            }
-            if(hours == 0){
-              hours = 12;
-            }
-            document.getElementById('time').innerHTML = hours + ':' + minutes + ':' + seconds;
+          if(hrs > 12){
+            hrs = hrs -12;
           }
-      </script>
+          if(hrs == 0){
+            hrs = 12;
+          }
+          document.getElementById('clock').innerHTML = hrs + ':' + min + ':' + sec;
+        } 
+    
+    </script>
   </body>
 </html>
