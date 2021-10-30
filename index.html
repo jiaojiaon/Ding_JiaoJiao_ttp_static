@@ -5,9 +5,9 @@
       <h1> The current time is: <span id="time"></span> </h1>
   </head>
   <body>
-      <p id="time">10:10:10</p>
-      <script type = "text/javascript">
-        setInterval(currenttime(), 500);
+      <p id="time"></p>
+      <script>
+        setInterval(currenttime());
           function currenttime(){
             var time = new Date();
             var hours = time.getHours();
