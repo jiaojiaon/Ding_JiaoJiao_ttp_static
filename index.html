@@ -4,9 +4,9 @@
     <h1> My name is Jiao Jiao Ding and my favorite hobby is reading. The current time is: <span id="time"></span></h1>
   </head>
   <body>
-    <div id = "time">10</div>
+    <div id = "time"></div>
     <script type = "text/javascript">
-      setInterval(displaytime(), 500);
+      setInterval(displaytime, 500);
         function displaytime(){
           var time = new Date(); 
           var hours = time.getHours();
