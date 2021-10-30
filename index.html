@@ -7,7 +7,7 @@
   <body>
     <div id = "time"></div>
     <script type = "text/javascript">
-      setInterval(displaytime, 1);
+      setInterval("displaytime()", 1);
         function displaytime(){
           var time = new Date(); 
           var hours = time.getHours();
