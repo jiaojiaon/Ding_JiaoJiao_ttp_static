@@ -2,25 +2,25 @@
 <html>
   <head>
     <h1> My name is Jiao Jiao Ding and my favorite hobby is reading.</h1>
-    <h1> The current time is: <span id="clock"></span></h1>
+    <h1> The current time is: <span id="time"></span></h1>
   </head>
   <body>
-    <div id = "clock"></div>
+    <div id = "time"></div>
     <script type = "text/javascript">
-      setInterval(displayclock, 1);
-        function displayclock(){
+      setInterval(displaytime, 1);
+        function displaytime(){
           var time = new Date(); 
-          var hrs = time.getHours();
-          var min = time.getMinutes();
-          var sec = time.getSeconds();
+          var hours = time.getHours();
+          var minutes = time.getMinutes();
+          var seconds = time.getSeconds();
 
-          if(hrs > 12){
-            hrs = hrs -12;
+          if(hours > 12){
+            hours = hours -12;
           }
-          if(hrs == 0){
-            hrs = 12;
+          if(hours == 0){
+            hours = 12;
           }
-          document.getElementById('clock').innerHTML = hrs + ':' + min + ':' + sec;
+          document.getElementById('clock').innerHTML = hours + ':' + minutes + ':' + seconds;
         } 
     
     </script>
