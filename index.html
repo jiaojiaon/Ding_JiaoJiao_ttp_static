@@ -6,7 +6,7 @@
   <body>
     <div id = "time">10</div>
     <script type = "text/javascript">
-      window.setInterval("displaytime()", 500);
+      setInterval(displaytime(), 500);
         function displaytime(){
           var time = new Date(); 
           var hours = time.getHours();
@@ -19,7 +19,7 @@
           if(hours == 0){
             hours = 12;
           }
-          document.getElementById('clock').innerHTML = hours + ':' + minutes + ':' + seconds;
+          document.getElementById('time').innerHTML = hours + ':' + minutes + ':' + seconds;
         } 
     
     </script>
