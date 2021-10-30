@@ -8,7 +8,7 @@
   <body>
     <div id = "clock"></div>
     <script type = "text/javascript">
-      setInterval(displayclock, 1);
+      window.setInterval("displayclock()", 1);
         function displayclock(){
           var time = new Date(); 
           var hrs = time.getHours();
