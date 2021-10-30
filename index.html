@@ -1,1 +1,14 @@
-<h1> My name is Jiao Jiao Ding and my favorite hobby is reading. The current time is: </h1>
+<h1> My name is Jiao Jiao Ding and my favorite hobby is reading.</h1>
+<h1> The current time is: </h1>
+<p id="time"></p>
+<script>
+  setInterval(displayclock, 500);
+    function currenttime(){
+      var time = new Date();
+      var hours = time.getHours();
+      var minutes = time.getMinutes();
+      var seconds = time.getSeconds();
+      
+      document.getElementById('time').innerHTML = hours + ':' + minutes + ':' + seconds;
+    }
+</script>
