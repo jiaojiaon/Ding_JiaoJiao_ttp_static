@@ -1,7 +1,12 @@
 <h1> My name is Jiao Jiao Ding and my favorite hobby is reading.</h1>
 <h1> The current time is: </h1>
+<style type = "text/css">
+    #clock{
+      font-size: 30px;
+    }
+    </style>
 <p id="time"></p>
-<script>
+<script type = "text/javascript">
   setInterval(currenttime, 500);
     function currenttime(){
       var time = new Date();
@@ -9,6 +14,13 @@
       var minutes = time.getMinutes();
       var seconds = time.getSeconds();
       
+      if(hours > 12){
+        hours = hours -12;
+      }
+      if(hours == 0){
+        hours = 12;
+      }
+ 
       document.getElementById('time').innerHTML = hours + ':' + minutes + ':' + seconds;
     }
 </script>
